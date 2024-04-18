@@ -8,6 +8,7 @@ import { DeleteComponent } from './components/delete/delete.component';
 
 const routes: Routes = [
   { path:'getall',component:GetallComponent},
+  { path:'',component:GetallComponent},
   {path:'getbyid',component:GetbyidComponent},
   {path:'create',component:CreateComponent},
   {path:'update',component:UpdateComponent},
