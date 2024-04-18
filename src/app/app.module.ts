@@ -3,16 +3,38 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { GetallComponent } from './components/getall/getall.component';
+import { GetbyidComponent } from './components/getbyid/getbyid.component';
+import { CreateComponent } from './components/create/create.component';
+import { UpdateComponent } from './components/update/update.component';
+import { DeleteComponent } from './components/delete/delete.component';
+import { RouterModule } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
+import { Component } from '@angular/core';
+import { DecimalPipe } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    GetallComponent,
+    GetbyidComponent,
+    CreateComponent,
+    UpdateComponent,
+    DeleteComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    
+    
   ],
-  providers: [],
+  providers: [
+    provideAnimationsAsync()
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
